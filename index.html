@@ -1,0 +1,63 @@
+<html>
+    <title>reversi</title>
+    <body>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <section style="display: flex;">
+            <div id="reversi_board"></div>
+            <div style="width: 50px;"></div>
+            <div style="display: inline-block;">
+                <div style="height: 80px;"></div>
+                <label style="color: rgb(0, 0, 255);">
+                    雙方都電腦功能可正常使用。
+                    <br>
+                    綠色代表可以下的點。
+                    <br>
+                    AI下的點會用橘黃色框出來(偶爾會有框沒出來的bug)。
+                </label>
+                <br>
+                <br>
+                誰先攻：
+                <select id="select_round" onchange="init()">
+                    <option value="black">黑色</option>
+                    <option value="white">白色</option>
+                </select>
+                <button onclick="init()">重新開始</button>
+                <br>
+                黑子：
+                <select id="select_black" onchange="init()">
+                    <option value="player">玩家</option>
+                    <option value="computer">電腦</option>
+                </select>
+                <br>
+                白子：
+                <select id="select_white" onchange="init()">
+                    <option value="player">玩家</option>
+                    <option value="computer">電腦</option>
+                </select>
+                <br>
+                難度：
+                <select id="search_tree_level_limit_1" onchange="init()">
+                    <option value="5">簡單</option>
+                    <option value="4">普通</option>
+                </select>
+                <br>
+                黑子數量：
+                <label id="black_size"></label>
+                <br>
+                白子數量：
+                <label id="white_size"></label>
+                <br>
+                <label id="result" style="font-size:50px; color:#FF0000"></label>
+                <br>
+                <label id="ai_computing" style="font-size:50px; color:#FF0000"></label>
+            </div>
+        </section>
+
+        <link rel=stylesheet type="text/css" href="index.css">
+        <script type="text/javascript" src="reversi.js"></script>
+        <script type="text/javascript" src="reversiAI.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        
+    </body>
+</html>
