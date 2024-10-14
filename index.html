@@ -11,6 +11,10 @@
                 <label style="color: rgb(0, 0, 255);">
                     雙方都電腦功能可正常使用。
                     <br>
+                    如果有調整搜尋樹深度，需要按重新開始才會更新。
+                    <br>
+                    另外建議搜尋樹深度<=6，否則會算不完。
+                    <br>
                     綠色代表可以下的點。
                     <br>
                     AI下的點會用橘黃色框出來(偶爾會有框沒出來的bug)。
@@ -24,23 +28,26 @@
                 </select>
                 <button onclick="init()">重新開始</button>
                 <br>
-                黑子：
+                黑子玩家：
                 <select id="select_black" onchange="init()">
                     <option value="player">玩家</option>
                     <option value="computer">電腦</option>
                 </select>
                 <br>
-                白子：
+                白子玩家：
                 <select id="select_white" onchange="init()">
                     <option value="player">玩家</option>
                     <option value="computer">電腦</option>
                 </select>
                 <br>
-                難度：
-                <select id="search_tree_level_limit_1" onchange="init()">
-                    <option value="5">簡單</option>
-                    <option value="4">普通</option>
-                </select>
+                搜尋樹深度-1：
+                <input id="search_tree_level_limit_1" type="text" value="4" size=2>
+                <br>
+                搜尋樹深度-2：
+                <input id="search_tree_level_limit_2" type="text" value="4" size=2>
+                <br>
+                搜尋樹深度-3：
+                <input id="search_tree_level_limit_3" type="text" value="4" size=2>
                 <br>
                 黑子數量：
                 <label id="black_size"></label>
